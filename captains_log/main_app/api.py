@@ -8,3 +8,4 @@ class CaptainsViewSet(viewsets.ModelViewSet):
         permissions.AllowAny
     ]
     serializer_class = CaptainsSerializer
+
