@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
-import Form from './Form';
+import AddPlayerForm from './AddPlayerForm';
 import PlayerList from './PlayerList';
 
 export default function Dashboard() {
     return (
         <Fragment>
-            <Form />
+            <AddPlayerForm />
             <PlayerList />
         </Fragment>
     )
