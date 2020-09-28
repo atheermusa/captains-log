@@ -5,3 +5,4 @@ class CaptainsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Captains
         fields = '__all__'
+
