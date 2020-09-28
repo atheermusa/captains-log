@@ -1,0 +1,24 @@
+{
+  "name": "captains-log",
+  "version": "1.0.0",
+  "description": "### Collaborators [@JamieSear](https://github.com/JamieSear), [@atheermusa](https://github.com/atheermusa), [@Angus-Woodman](https://github.com/Angus-Woodman)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamieSear/captains-log.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JamieSear/captains-log/issues"
+  },
+  "homepage": "https://github.com/JamieSear/captains-log#readme",
+  "devDependencies": {
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
+}
