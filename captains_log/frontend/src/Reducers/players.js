@@ -1,7 +1,7 @@
-import { GET_PLAYERS, DELETE_PLAYERS } from '../actions/types.js'
+import { GET_PLAYERS, DELETE_PLAYERS, ADD_PLAYERS } from '../actions/types.js'
 
 const initialState = {
-    players: []
+    players: [],
 }
 
 export default function(state = initialState, action) {
@@ -15,7 +15,12 @@ export default function(state = initialState, action) {
             return {
                 ...state,
                 players: state.players.filter(player => player.id !== action.payload)
-            }
+            };
+        case ADD_PLAYERS:
+            return {
+                ...state,
+                players: [...state.players, action.payload],
+            };
             default:
                 return state;
     }

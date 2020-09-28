@@ -1,7 +1,7 @@
 //http requests
 import axios from 'axios';
 
-import { GET_PLAYERS, DELETE_PLAYERS } from './types';
+import { GET_PLAYERS, DELETE_PLAYERS, ADD_PLAYERS } from './types';
 
 //GET PLAYERS
 export const getPlayers = () => dispatch => {
@@ -24,5 +24,17 @@ export const deletePlayers = (id) => dispatch => {
             payload: id
         });
     })
+    .catch(err => console.log(err));
+}
+
+//ADD PLAYERS
+export const addPlayers = (players) => dispatch => {
+    axios.post('/api/captains/', players)
+    .then(res => {
+        dispatch({
+            type: ADD_PLAYERS,
+            payload: res.data,
+        });
+    }) 
     .catch(err => console.log(err));
 }
