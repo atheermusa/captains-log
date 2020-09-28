@@ -5,12 +5,8 @@
 
 Cloning this repo:
 
-cd into captains-log (make sure you can see requirements.txt when you ls)
-
-pipenv install -r requirements.txt
-
-open up shell with: pipenv shell
-
-cd into captains_log
-
-run server with python manage.py runserver
+1. cd into captains-log (make sure you can see requirements.txt when you ls)
+2. pipenv install -r requirements.txt
+3. open up shell with: pipenv shell
+4. cd into captains_log
+5. run server with python manage.py runserver
