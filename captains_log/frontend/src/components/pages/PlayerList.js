@@ -1,11 +1,13 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import { getPlayers, deletePlayers } from '../../actions/players'
 
 export class PlayerList extends Component {
-    static PropTypes = {
-        players: PropTypes.array.isRequired
+    static propTypes = {
+        players: propTypes.array.isRequired,
+        getPlayers: propTypes.func.isRequired,
+        deletePlayers: propTypes.func.isRequired
     };
 
     componentDidMount() {
