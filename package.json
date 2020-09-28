@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "webpack --mode development --watch ./captains_log/frontend/src/index.js --output ./captains_log/frontend/static/frontend/main.js",
     "build": "webpack --mode production ./captains_log/frontend/src/index.js --output ./captains_log/frontend/static/frontend/main.js"
-
   },
   "repository": {
     "type": "git",
