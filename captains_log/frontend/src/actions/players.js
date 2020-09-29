@@ -1,24 +1,27 @@
 //http requests
 import axios from 'axios';
-import { createMessage } from './messages';
+import { createMessage, returnErrors } from './messages';
+import { tokenConfig } from './auth'
 
-import { GET_PLAYERS, DELETE_PLAYERS, ADD_PLAYERS, GET_ERRORS } from './types';
+import { GET_PLAYERS, DELETE_PLAYERS, ADD_PLAYERS } from './types';
 
 //GET PLAYERS
-export const getPlayers = () => dispatch => {
-    axios.get('/api/captains')
+export const getPlayers = () => (dispatch, getState) => {
+    axios.get('/api/captains', tokenConfig(getState))
     .then(res => {
         dispatch({
             type: GET_PLAYERS,
             payload: res.data
         });
     }) 
-    .catch(err => console.log(err));
+    .catch(err => 
+        dispatch(returnErrors(err.response.data, 
+            err.response.status)));
 }
 
 //DELETE PLAYERS
-export const deletePlayers = (id) => dispatch => {
-    axios.delete(`/api/captains/${id}`)
+export const deletePlayers = (id) => (dispatch, getState) => {
+    axios.delete(`/api/captains/${id}`, tokenConfig(getState))
     .then(res => {
         dispatch(createMessage({ deletePlayer: 'Player Deleted' }));
         dispatch({
@@ -30,8 +33,8 @@ export const deletePlayers = (id) => dispatch => {
 }
 
 //ADD PLAYERS
-export const addPlayers = (players) => dispatch => {
-    axios.post('/api/captains/', players)
+export const addPlayers = (players) => (dispatch, getState) => {
+    axios.post('/api/captains/', players, tokenConfig(getState))
     .then(res => {
         dispatch(createMessage({ addPlayer: 'Player Added' }));
         dispatch({
@@ -39,14 +42,5 @@ export const addPlayers = (players) => dispatch => {
             payload: res.data,
         });
     }) 
-    .catch(err => {
-        const errors = {
-            msg: err.response.data,
-            status: err.response.status
-        };
-        dispatch({
-            type: GET_ERRORS,
-            payload: errors
-        })
-    });
+    .catch(err => dispatch(returnErrors(err.response.data, err.response.status)));
 };
