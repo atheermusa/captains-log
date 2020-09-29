@@ -6,6 +6,8 @@ node_modules
 
 DS_Store
 
+main.js
+
 .vscode
 
 ### Django ###
