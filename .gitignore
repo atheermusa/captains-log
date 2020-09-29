@@ -18,6 +18,7 @@ main.js
 *.pyc
 __pycache__/
 local_settings.py
+main.js
 db.sqlite3
 db.sqlite3-journal
 media

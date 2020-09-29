@@ -5,9 +5,15 @@ from .serializers import CaptainsSerializer, MatchReportSerializer, SquadInfoSer
 class CaptainsViewSet(viewsets.ModelViewSet):
     queryset = Captains.objects.all()
     permission_classes = [
-        permissions.AllowAny
+        permissions.IsAuthenticated
     ]
     serializer_class = CaptainsSerializer
+
+    def get_queryset(self):
+        return self.request.user.captains.all()
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
 
 class MatchReportViewSet(viewsets.ModelViewSet):
     queryset = MatchReport.objects.all()

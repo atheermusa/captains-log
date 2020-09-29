@@ -16,12 +16,16 @@ export class Alerts extends Component {
             if(error.msg.firstname) alert.error(`First name: ${error.msg.firstname.join()}`);
             if(error.msg.lastname) alert.error(`Last name: ${error.msg.lastname.join()}`);
             if(error.msg.email) alert.error(`Email: ${error.msg.email.join()}`);
+            if(error.msg.non_field_errors) alert.error(error.msg.non_field_errors.join());
+            if(error.msg.username) alert.error(error.msg.username.join());
         }
 
 
         if (message !== prevProps.message) {
             if (message.deletePlayer) alert.success(message.deletePlayer);
             if (message.addPlayer) alert.success(message.addPlayer);
+            if (message.passwordNotMatch) alert.error(message.passwordNotMatch);
+
         }
     }
 
