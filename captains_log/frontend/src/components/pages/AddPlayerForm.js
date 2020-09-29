@@ -23,9 +23,9 @@ export class AddPlayerForm extends Component {
         const player = { firstname, lastname, email };
         this.props.addPlayers(player);
         this.setState({
-            firstname: '',
-            lastname: '',
-            email: ''
+            firstname: "",
+            lastname: "",
+            email: ""
         });
     };
 
