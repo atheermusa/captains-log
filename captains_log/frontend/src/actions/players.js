@@ -7,7 +7,7 @@ import { GET_PLAYERS, DELETE_PLAYERS, ADD_PLAYERS } from './types';
 
 //GET PLAYERS
 export const getPlayers = () => (dispatch, getState) => {
-    axios.get('/api/captains', tokenConfig(getState))
+    axios.get('/api/players', tokenConfig(getState))
     .then(res => {
         dispatch({
             type: GET_PLAYERS,
@@ -21,7 +21,7 @@ export const getPlayers = () => (dispatch, getState) => {
 //DELETE PLAYERS
 export const deletePlayers = (id) => (dispatch, getState) => {
     axios
-      .delete(`/api/captains/${id}/`, tokenConfig(getState))
+      .delete(`/api/players/${id}/`, tokenConfig(getState))
       .then((res) => {
         dispatch(createMessage({ deleteLead: 'Lead Deleted' }));
         dispatch({
@@ -29,12 +29,12 @@ export const deletePlayers = (id) => (dispatch, getState) => {
           payload: id,
         });
       })
-      .catch((err) => console.log(err));
+      .catch((err) => dispatch(returnErrors(err.response.data, err.response.status)));
   };
 
 //ADD PLAYERS
 export const addPlayers = (players) => (dispatch, getState) => {
-    axios.post('/api/captains/', players, tokenConfig(getState))
+    axios.post('/api/players/', players, tokenConfig(getState))
     .then(res => {
         dispatch(createMessage({ addPlayer: 'Player Added' }));
         dispatch({

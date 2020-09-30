@@ -1,12 +1,12 @@
 from rest_framework import routers
-from .api import CaptainsViewSet, MatchReportViewSet, SquadInfoViewSet, PlayerInfoViewSet, TeamInfoViewSet, TeamPlayersViewSet
+from .api import PlayersViewSet, MatchReportViewSet, SquadInfoViewSet, TeamInfoViewSet, TeamPlayersViewSet
 
 router = routers.DefaultRouter()
-router.register('api/captains', CaptainsViewSet, 'captains')
-router.register('api/reports', MatchReportViewSet, 'captains')
-router.register('api/squads', SquadInfoViewSet, 'captains')
-router.register('api/players', PlayerInfoViewSet, 'captains')
-router.register('api/teams', TeamInfoViewSet, 'captains')
+router.register('api/players', PlayersViewSet, 'players')
+router.register('api/reports', MatchReportViewSet, 'players')
+router.register('api/squads', SquadInfoViewSet, 'players')
+# router.register('api/players', PlayerInfoViewSet, 'players')
+router.register('api/teams', TeamInfoViewSet, 'players')
 router.register('api/teamplayers', TeamPlayersViewSet, 'reports')
 
 urlpatterns = router.urls
