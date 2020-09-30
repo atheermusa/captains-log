@@ -10,7 +10,8 @@ export class AddReport extends Component {
         opposition: "",
         message: "",
         final_score: "",
-        result:""
+        result:"",
+        team_id:""
     };
 
     static propTypes = {
@@ -21,20 +22,21 @@ export class AddReport extends Component {
 
     onSubmit = e => {
         e.preventDefault();
-        const { date, opposition, message, final_score, result} = this.state;
-        const report = { date, opposition, message, final_score, result };
+        const { date, opposition, message, final_score, result, team_id} = this.state;
+        const report = { date, opposition, message, final_score, result, team_id };
         this.props.addReports(report);
         this.setState({
             date: "",
             opposition: "",
             message: "",
             final_score: "",
-            result:""
+            result:"",
+            team_id:""
         });
     };
 
     render() {
-        const { date, opposition, message, final_score, result} = this.state;
+        const { date, opposition, message, final_score, result, team_id} = this.state;
         return (
             <div className="card card-body mt-4 mb-4">
             <h2>Add Report</h2>
@@ -87,6 +89,16 @@ export class AddReport extends Component {
                   name="result"
                   onChange={this.onChange}
                   value={result}
+                />
+              </div>
+              <div className="form-group">
+                <label>Team id</label>
+                <input
+                  className="form-control"
+                  type="number"
+                  name="team_id"
+                  onChange={this.onChange}
+                  value={team_id}
                 />
               </div>
               <div className="form-group">

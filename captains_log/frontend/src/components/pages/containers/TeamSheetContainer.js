@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
-import { PlayerList, PlayerPosition } from '../components'
-import '../Styles/teamBuilder.css'
+import React, { Component } from 'react';
+// import { Link } from 'react-router-dom';
+import { PlayerList, PlayerPosition, TeamList } from '../components';
+import '../Styles/teamBuilder.css';
 
 export default class TeamSheetContainer extends Component {
 
@@ -42,7 +43,9 @@ export default class TeamSheetContainer extends Component {
     return (
       <div id='team-builder-container'>
         <div id='team-builder-teams-container'>
-
+        <h1>Teams</h1>
+        <p>Click to see different team formations</p>
+          <TeamList></TeamList>
         </div>
         <div id="team-builder-pitch-container">
           <div className="formation-selector">

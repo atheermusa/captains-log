@@ -26,6 +26,8 @@ export class Alerts extends Component {
             if (message.addPlayer) alert.success(message.addPlayer);
             if (message.deleteReport) alert.success(message.deleteReport);
             if (message.addReport) alert.success(message.addReport);
+            if (message.deleteTeam) alert.success(message.deleteTeam);
+            if (message.addTeam) alert.success(message.addTeam);
             if (message.passwordNotMatch) alert.error(message.passwordNotMatch);
             if (message.registerSuccess) alert.success(message.registerSuccess);
 
