@@ -8,7 +8,8 @@ export class AddPlayerForm extends Component {
         id: "",
         firstname: "",
         lastname: "",
-        email: ""
+        email: "",
+        player_notes: ""
     };
 
     static propTypes = {
@@ -19,18 +20,19 @@ export class AddPlayerForm extends Component {
 
     onSubmit = e => {
         e.preventDefault();
-        const { firstname, lastname, email} = this.state;
-        const player = { firstname, lastname, email };
+        const { firstname, lastname, email, player_notes} = this.state;
+        const player = { firstname, lastname, email, player_notes };
         this.props.addPlayers(player);
         this.setState({
             firstname: "",
             lastname: "",
-            email: ""
+            email: "",
+            player_notes: ""
         });
     };
 
     render() {
-        const { firstname, lastname, email} = this.state;
+        const { firstname, lastname, email, player_notes} = this.state;
         return (
             <div className="card card-body mt-4 mb-4">
             <h2>Add Player</h2>
@@ -63,6 +65,16 @@ export class AddPlayerForm extends Component {
                   name="email"
                   onChange={this.onChange}
                   value={email}
+                />
+              </div>
+              <div className="form-group">
+                <label>Player Notes</label>
+                <input
+                  className="form-control"
+                  type="text"
+                  name="player_notes"
+                  onChange={this.onChange}
+                  value={player_notes}
                 />
               </div>
               <div className="form-group">

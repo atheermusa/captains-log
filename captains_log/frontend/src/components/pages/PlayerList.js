@@ -25,6 +25,7 @@ export class PlayerList extends Component {
                             <th>First Name</th>
                             <th>Second Name</th>
                             <th>Email</th>
+                            <th>Player Notes</th>
                             <th />
                         </tr>
                     </thead>
@@ -35,6 +36,7 @@ export class PlayerList extends Component {
                                 <td>{player.firstname}</td>
                                 <td>{player.lastname}</td>
                                 <td>{player.email}</td>
+                                <td>{player.player_notes}</td>
                                 <td><button onClick={this.props.deletePlayers.bind(this, player.id)} className="btn btn-danger btn-sm">Delete</button></td>
                             </tr>
                         ))}
