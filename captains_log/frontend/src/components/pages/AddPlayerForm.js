@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import propTypes from 'prop-types';
 import { addPlayers } from '../../actions/players';
 
@@ -81,6 +82,8 @@ export class AddPlayerForm extends Component {
                 <button type="submit" className="btn btn-primary">
                   Submit
                 </button>
+                <Link to="/teambuilder" className="nav-link">Create Team
+                </Link>
               </div>
             </form>
           </div>

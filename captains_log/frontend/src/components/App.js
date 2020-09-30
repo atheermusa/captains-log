@@ -13,6 +13,8 @@ import Login from './accounts/Login';
 import Register from './accounts/Register';
 import PrivateRoute from './common/PrivateRoute';
 import TeamSheetContainer from './pages/containers/TeamSheetContainer'
+import PlayersPage from './pages/containers/PlayersPage'
+
 
 
 import { Provider } from 'react-redux';
@@ -42,6 +44,7 @@ class App extends Component {
                                 <Switch>
                                 <PrivateRoute exact path="/" component={Dashboard} />
                                 <PrivateRoute exact path="/teambuilder" component={TeamSheetContainer} />
+                                <PrivateRoute exact path="/players" component={PlayersPage} />
                                 <Route exact path="/register" component={Register} />
                                 <Route exact path="/login" component={Login} />
                                 </Switch>
