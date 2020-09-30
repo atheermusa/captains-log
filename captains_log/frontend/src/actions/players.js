@@ -23,7 +23,7 @@ export const deletePlayers = (id) => (dispatch, getState) => {
     axios
       .delete(`/api/players/${id}/`, tokenConfig(getState))
       .then((res) => {
-        dispatch(createMessage({ addPlayer: 'Player Deleted' }));
+        dispatch(createMessage({ deletePlayer: 'Player Deleted' }));
         dispatch({
           type: DELETE_PLAYERS,
           payload: id,

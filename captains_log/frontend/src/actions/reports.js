@@ -23,7 +23,7 @@ export const deleteReports = (id) => (dispatch, getState) => {
     axios
       .delete(`/api/reports/${id}/`, tokenConfig(getState))
       .then((res) => {
-        dispatch(createMessage({ addPlayer: 'Report Deleted' }));
+        dispatch(createMessage({ addReport: 'Report Deleted' }));
         dispatch({
           type: DELETE_REPORTS,
           payload: id,
@@ -36,7 +36,7 @@ export const deleteReports = (id) => (dispatch, getState) => {
 export const addReports = (reports) => (dispatch, getState) => {
     axios.post('/api/reports/', reports, tokenConfig(getState))
     .then(res => {
-        dispatch(createMessage({ addPlayer: 'Report Added' }));
+        dispatch(createMessage({ deleteReport: 'Report Added' }));
         dispatch({
             type: ADD_REPORTS,
             payload: res.data,
