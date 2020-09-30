@@ -24,6 +24,8 @@ export class Alerts extends Component {
         if (message !== prevProps.message) {
             if (message.deletePlayer) alert.success(message.deletePlayer);
             if (message.addPlayer) alert.success(message.addPlayer);
+            if (message.deleteReport) alert.success(message.deleteReport);
+            if (message.addReport) alert.success(message.addReport);
             if (message.passwordNotMatch) alert.error(message.passwordNotMatch);
 
         }
@@ -39,4 +41,4 @@ const mapStateToProps = state => ({
     message: state.messages
 })
 
-export default connect(mapStateToProps)(withAlert()(Alerts)); 
+export default connect(mapStateToProps)(withAlert()(Alerts));

@@ -11,3 +11,6 @@ export const LOGIN_FAIL = 'LOGIN_FAIL';
 export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS';
 export const REGISTER_SUCCESS = 'REGISTER_SUCCESS';
 export const REGISTER_FAIL = 'REGISTER_FAIL';
+export const GET_REPORTS = 'GET_REPORTS';
+export const DELETE_REPORTS = 'DELETE_REPORTS';
+export const ADD_REPORTS = 'ADD_REPORTS';
