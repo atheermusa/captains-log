@@ -1,89 +1,98 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import propTypes from 'prop-types';
-import { addPlayers } from '../../actions/players';
+import { addReports } from '../../../actions/reports';
 
-export class AddPlayerForm extends Component {
+export class AddReport extends Component {
     state = {
         id: "",
-        firstname: "",
-        lastname: "",
-        email: "",
-        player_notes: ""
+        date: "",
+        opposition: "",
+        message: "",
+        final_score: "",
+        result:""
     };
 
     static propTypes = {
-        addPlayers: propTypes.func.isRequired
+        addReports: propTypes.func.isRequired
     }
 
     onChange = e => this.setState({ [e.target.name]: e.target.value });
 
     onSubmit = e => {
         e.preventDefault();
-        const { firstname, lastname, email, player_notes} = this.state;
-        const player = { firstname, lastname, email, player_notes };
-        this.props.addPlayers(player);
+        const { date, opposition, message, final_score, result} = this.state;
+        const report = { date, opposition, message, final_score, result };
+        this.props.addReports(report);
         this.setState({
-            firstname: "",
-            lastname: "",
-            email: "",
-            player_notes: ""
+            date: "",
+            opposition: "",
+            message: "",
+            final_score: "",
+            result:""
         });
     };
 
     render() {
-        const { firstname, lastname, email, player_notes} = this.state;
+        const { date, opposition, message, final_score, result} = this.state;
         return (
             <div className="card card-body mt-4 mb-4">
-            <h2>Add Player</h2>
+            <h2>Add Report</h2>
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
-                <label>First Name</label>
+                <label>Date</label>
                 <input
                   className="form-control"
-                  type="text"
-                  name="firstname"
+                  type="date"
+                  name="date"
                   onChange={this.onChange}
-                  value={firstname}
+                  value={date}
                 />
               </div>
               <div className="form-group">
-                <label>Last Name</label>
+                <label>Opposition</label>
                 <input
                   className="form-control"
                   type="text"
-                  name="lastname"
+                  name="opposition"
                   onChange={this.onChange}
-                  value={lastname}
+                  value={opposition}
                 />
               </div>
               <div className="form-group">
-                <label>Email</label>
-                <input
-                  className="form-control"
-                  type="email"
-                  name="email"
-                  onChange={this.onChange}
-                  value={email}
-                />
-              </div>
-              <div className="form-group">
-                <label>Player Notes</label>
+                <label>Message</label>
                 <input
                   className="form-control"
                   type="text"
-                  name="player_notes"
+                  name="message"
                   onChange={this.onChange}
-                  value={player_notes}
+                  value={message}
+                />
+              </div>
+              <div className="form-group">
+                <label>Final Score</label>
+                <input
+                  className="form-control"
+                  type="text"
+                  name="final_score"
+                  onChange={this.onChange}
+                  value={final_score}
+                />
+              </div>
+              <div className="form-group">
+                <label>Result</label>
+                <input
+                  className="form-control"
+                  type="text"
+                  name="result"
+                  onChange={this.onChange}
+                  value={result}
                 />
               </div>
               <div className="form-group">
                 <button type="submit" className="btn btn-primary">
                   Submit
                 </button>
-                <Link to="/teambuilder" className="nav-link">Create Team
-                </Link>
               </div>
             </form>
           </div>
@@ -91,4 +100,4 @@ export class AddPlayerForm extends Component {
     }
 }
 
-export default connect(null, { addPlayers })(AddPlayerForm);
+export default connect(null, { addReports })(AddReport);

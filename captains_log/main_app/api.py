@@ -1,9 +1,8 @@
-from .models import Players, MatchReport, SquadInfo, TeamInfo, TeamPlayers
+from .models import Players, MatchReport, TeamInfo, TeamPlayers
 from rest_framework import viewsets, permissions
-from .serializers import PlayersSerializer, MatchReportSerializer, SquadInfoSerializer, TeamInfoSerializer, TeamPlayersSerializer
+from .serializers import PlayersSerializer, MatchReportSerializer, TeamInfoSerializer, TeamPlayersSerializer
 
 class PlayersViewSet(viewsets.ModelViewSet):
-    # queryset = Players.objects.all()
     permission_classes = [
         permissions.IsAuthenticated
     ]
@@ -16,18 +15,23 @@ class PlayersViewSet(viewsets.ModelViewSet):
         serializer.save(owner=self.request.user)
 
 class MatchReportViewSet(viewsets.ModelViewSet):
-    queryset = MatchReport.objects.all()
     permission_classes = [
-        permissions.AllowAny
+        permissions.IsAuthenticated
     ]
     serializer_class = MatchReportSerializer
 
-class SquadInfoViewSet(viewsets.ModelViewSet):
-    queryset = SquadInfo.objects.all()
-    permission_classes = [
-        permissions.AllowAny
-    ]
-    serializer_class = SquadInfoSerializer
+    def get_queryset(self):
+        return self.request.user.reports.all()
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
+
+# class SquadInfoViewSet(viewsets.ModelViewSet):
+#     queryset = SquadInfo.objects.all()
+#     permission_classes = [
+#         permissions.AllowAny
+#     ]
+#     serializer_class = SquadInfoSerializer
 
 # class PlayerInfoViewSet(viewsets.ModelViewSet):
 #     queryset = PlayerInfo.objects.all()
@@ -37,15 +41,25 @@ class SquadInfoViewSet(viewsets.ModelViewSet):
 #     serializer_class = PlayerInfoSerializer
 
 class TeamInfoViewSet(viewsets.ModelViewSet):
-    queryset = TeamInfo.objects.all()
     permission_classes = [
-        permissions.AllowAny
+        permissions.IsAuthenticated
     ]
     serializer_class = TeamInfoSerializer
 
+    def get_queryset(self):
+        return self.request.user.teams.all()
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
+
 class TeamPlayersViewSet(viewsets.ModelViewSet):
-    queryset = TeamPlayers.objects.all()
     permission_classes = [
-        permissions.AllowAny
+        permissions.IsAuthenticated
     ]
     serializer_class = TeamPlayersSerializer
+
+    def get_queryset(self):
+        return self.request.user.teamplayers.all()
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
