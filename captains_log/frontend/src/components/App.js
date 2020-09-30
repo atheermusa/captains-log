@@ -12,8 +12,9 @@ import Alerts from './layout/Alerts';
 import Login from './accounts/Login';
 import Register from './accounts/Register';
 import PrivateRoute from './common/PrivateRoute';
-import TeamSheetContainer from './pages/containers/TeamSheetContainer'
-import PlayersPage from './pages/containers/PlayersPage'
+import Homepage from './pages/containers/Homepage';
+import TeamSheetContainer from './pages/containers/TeamSheetContainer';
+import PlayersPage from './pages/containers/PlayersPage';
 
 
 
@@ -47,6 +48,7 @@ class App extends Component {
                                 <PrivateRoute exact path="/players" component={PlayersPage} />
                                 <Route exact path="/register" component={Register} />
                                 <Route exact path="/login" component={Login} />
+                                <Route exact path="/home" component={Homepage} />
                                 </Switch>
                             </div>
                         </Fragment>

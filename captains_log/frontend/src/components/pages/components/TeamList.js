@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { getPlayers, deletePlayers } from '../../../actions/players'
 
 
-export class PlayerList extends Component {
+export class TeamList extends Component {
 
     static propTypes = {
         players: PropTypes.array.isRequired,
@@ -22,14 +22,12 @@ export class PlayerList extends Component {
         return (
             <div id = 'player-list-container'>
                 {this.props.players.map((player, idx) => (
-              <PlayerThumbnail
+              <TeamThumbnail
                 idx={idx}
                 id={idx}
                 key={idx}
                 photo={"https://res.cloudinary.com/dl4pcxjxz/image/upload/v1601304993/cbWFuY2hlc3Rlci11bml0ZWQtc2hpcnQtMjAyMC0yMS1udW1iZXItNy1iZWNraGFtLTM5NDItMDAxLXNxdWFyZQ_aa_qt8ujn.png"}
-                firstName={player.firstname}
-                lastName={player.lastname}
-                email={player.email}
+                teamname={player.firstname}
                 notes={player.player_notes}
               />))}
             </div>
