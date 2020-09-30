@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { PlayerCard } from '.'
+import { PlayerCard, PlayerPosition } from '.'
 import '../Styles/playerThumbnail.css'
 
 export default class PlayerThumbnail extends Component {
@@ -11,9 +11,11 @@ export default class PlayerThumbnail extends Component {
     render() {
         return (
             <div className='player-thumbnail-container'>
+                <PlayerPosition>
                 <PlayerCard id = {this.state.id} className="player-thumbnail">
                     <img className="player-thumbnail-photo" src={this.props.photo} alt="football shirt icon"></img>
                 </PlayerCard>
+                </PlayerPosition>
                 <h2 className= 'player-thumbnail-name' >{this.props.firstName} {this.props.lastName}</h2>
                 <p className= 'player-thumbnail-notes'>Notes: {this.props.notes}</p>
             </div>
