@@ -13,24 +13,24 @@ export const getPlayers = () => (dispatch, getState) => {
             type: GET_PLAYERS,
             payload: res.data
         });
-    }) 
+    })
     .catch(err => 
-        dispatch(returnErrors(err.response.data, 
-            err.response.status)));
+        dispatch(returnErrors(err.response.data, err.response.status)));
 }
 
 //DELETE PLAYERS
 export const deletePlayers = (id) => (dispatch, getState) => {
-    axios.delete(`/api/captains/${id}`, tokenConfig(getState))
-    .then(res => {
-        dispatch(createMessage({ deletePlayer: 'Player Deleted' }));
+    axios
+      .delete(`/api/captains/${id}/`, tokenConfig(getState))
+      .then((res) => {
+        dispatch(createMessage({ deleteLead: 'Lead Deleted' }));
         dispatch({
-            type: DELETE_PLAYERS,
-            payload: id
+          type: DELETE_PLAYERS,
+          payload: id,
         });
-    })
-    .catch(err => console.log(err));
-}
+      })
+      .catch((err) => console.log(err));
+  };
 
 //ADD PLAYERS
 export const addPlayers = (players) => (dispatch, getState) => {

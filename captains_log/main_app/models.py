@@ -6,7 +6,7 @@ class Captains(models.Model):
     firstname = models.CharField(max_length=50)
     lastname = models.CharField(max_length=50)
     email = models.CharField(max_length=70)
-    owner = models.ForeignKey(User, related_name="captians", on_delete=models.CASCADE, null=True)
+    owner = models.ForeignKey(User, related_name="captains", on_delete=models.CASCADE, null=True)
 
 class MatchReport(models.Model):
     captain_id = models.ForeignKey(Captains, on_delete=models.CASCADE, null=True)

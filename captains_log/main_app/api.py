@@ -3,7 +3,7 @@ from rest_framework import viewsets, permissions
 from .serializers import CaptainsSerializer, MatchReportSerializer, SquadInfoSerializer, PlayerInfoSerializer, TeamInfoSerializer, TeamPlayersSerializer
 
 class CaptainsViewSet(viewsets.ModelViewSet):
-    queryset = Captains.objects.all()
+    # queryset = Captains.objects.all()
     permission_classes = [
         permissions.IsAuthenticated
     ]
