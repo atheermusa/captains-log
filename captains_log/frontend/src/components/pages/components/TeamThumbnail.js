@@ -12,8 +12,8 @@ export default class TeamThumbnail extends Component {
         return (
             <div className='player-thumbnail-container'>
                 <img className="player-thumbnail-photo" src={this.props.photo} alt="football shirt icon"></img>
-                <h2 className= 'player-thumbnail-name' >{this.props.firstName} {this.props.lastName}</h2>
-                <p className= 'player-thumbnail-notes'>Notes: {this.props.notes}</p>
+                <h2 className= 'player-thumbnail-name' >{this.props.team_name} {this.props.lastName}</h2>
+                <p className= 'player-thumbnail-notes'>Formation: {this.props.formation}</p>
             </div>
         )
     }
