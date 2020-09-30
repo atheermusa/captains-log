@@ -1,0 +1,482 @@
+#team-builder-container {
+    display: flex;
+    height: 60vh;
+    justify-content: space-around;
+}
+
+#team-builder-pitch-container {
+    width: 60%;
+}
+
+#team-builder-players-container {
+    width: 20%;
+    height: 60vh;
+    overflow-y: scroll;
+}
+
+.team-builder-players-container {
+    height: 40vh;
+
+}
+
+#teamGrid {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    background-color: #9ACC9A;
+    justify-items: center;
+    align-items: center;
+}
+
+/* 3-4-3 Formation  */
+
+.threeFourThreePlayerOne{
+    display: block;
+   background-color: ivory;
+   height: 100%;
+   width: 100%;
+   grid-row-start: 1;
+   grid-column-start: 2;
+}
+
+.threeFourThreePlayerTwo{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 1;
+    grid-column-start: 4;
+}
+
+.threeFourThreePlayerThree{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 1;
+    grid-column-start: 6;
+}
+
+.threeFourThreePlayerFour{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 2;
+    grid-column-start: 1;
+}
+
+.threeFourThreePlayerFive{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 2;
+    grid-column-start: 3;
+}
+
+.threeFourThreePlayerSix{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 2;
+    grid-column-start: 5;
+}
+
+.threeFourThreePlayerSeven{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 2;
+    grid-column-start: 7;
+}
+
+.threeFourThreePlayerEight{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+grid-row-start: 3;
+grid-column-start: 2;
+}
+
+.threeFourThreePlayerNine{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+grid-row-start: 3;
+grid-column-start: 4;
+}
+
+.threeFourThreePlayerTen{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+grid-row-start: 3;
+grid-column-start: 6;
+}
+
+.threeFourThreePlayerEleven{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+grid-row-start: 4;
+grid-column-start: 4;
+}
+
+/* 3-5-2 Formation */
+
+.threeFiveTwoPlayerOne{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+grid-row-start: 1;
+grid-column-start: 3;
+}
+
+.threeFiveTwoPlayerTwo{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 1;
+    grid-column-start: 5;
+}
+
+.threeFiveTwoPlayerThree{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 2;
+    grid-column-start: 1;
+}
+
+.threeFiveTwoPlayerFour{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 2;
+    grid-column-start: 3;
+}
+
+.threeFiveTwoPlayerFive{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 2;
+    grid-column-start: 4;
+}
+
+.threeFiveTwoPlayerSix{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 2;
+    grid-column-start: 5;
+}
+
+.threeFiveTwoPlayerSeven{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 2;
+    grid-column-start: 7;
+}
+
+.threeFiveTwoPlayerEight{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 3;
+    grid-column-start: 2;
+}
+
+.threeFiveTwoPlayerNine{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 3;
+    grid-column-start: 4;
+}
+
+.threeFiveTwoPlayerTen{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 3;
+    grid-column-start: 6;
+}
+
+.threeFiveTwoPlayerEleven{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 4;
+    grid-column-start: 4;
+}
+
+
+/* 4-4-2 Formation */
+
+.fourFourTwoPlayerOne{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 1;
+    grid-column-start: 3;
+    }
+
+.fourFourTwoPlayerTwo{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 1;
+    grid-column-start: 5;
+}
+
+.fourFourTwoPlayerThree{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 2;
+    grid-column-start: 1;
+}
+
+.fourFourTwoPlayerFour{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 2;
+    grid-column-start: 3;
+}
+
+.fourFourTwoPlayerFive{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 2;
+    grid-column-start: 5;
+}
+
+.fourFourTwoPlayerSix{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 2;
+    grid-column-start: 7;
+}
+
+.fourFourTwoPlayerSeven{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 3;
+    grid-column-start:1;
+}
+
+.fourFourTwoPlayerEight{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 3;
+    grid-column-start: 3;
+}
+
+.fourFourTwoPlayerNine{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 3;
+    grid-column-start: 5;
+}
+
+.fourFourTwoPlayerTen{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 3;
+    grid-column-start: 7;
+}
+
+.fourFourTwoPlayerEleven{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 4;
+    grid-column-start: 4;
+}
+
+/* 4-3-3 Formation */
+
+.fourThreeThreePlayerOne{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 1;
+    grid-column-start: 2;
+    }
+
+.fourThreeThreePlayerTwo{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 1;
+    grid-column-start: 4;
+}
+
+.fourThreeThreePlayerThree{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 1;
+    grid-column-start: 6;
+}
+
+.fourThreeThreePlayerFour{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 2;
+    grid-column-start: 2;
+}
+
+.fourThreeThreePlayerFive{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 2;
+    grid-column-start: 4;
+}
+
+.fourThreeThreePlayerSix{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 2;
+    grid-column-start: 6;
+}
+
+.fourThreeThreePlayerSeven{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 3;
+    grid-column-start:1;
+}
+
+.fourThreeThreePlayerEight{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 3;
+    grid-column-start: 3;
+}
+
+.fourThreeThreePlayerNine{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 3;
+    grid-column-start: 5;
+}
+
+.fourThreeThreePlayerTen{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 3;
+    grid-column-start: 7;
+}
+
+.fourThreeThreePlayerEleven{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 4;
+    grid-column-start: 4;
+}
+
+/* 4-2-3 Formation */
+
+.fourTwoThreePlayerOne{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 1;
+    grid-column-start: 2;
+    }
+
+.fourTwoThreePlayerTwo{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 1;
+    grid-column-start: 4;
+}
+
+.fourTwoThreePlayerThree{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 1;
+    grid-column-start: 6;
+}
+
+.fourTwoThreePlayerFour{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 2;
+    grid-column-start: 2;
+}
+
+.fourTwoThreePlayerFive{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 2;
+    grid-column-start: 4;
+}
+
+.fourTwoThreePlayerSix{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 2;
+    grid-column-start: 6;
+}
+
+.fourTwoThreePlayerSeven{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 3;
+    grid-column-start:1;
+}
+
+.fourTwoThreePlayerEight{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 3;
+    grid-column-start: 3;
+}
+
+.fourTwoThreePlayerNine{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 3;
+    grid-column-start: 5;
+}
+
+.fourTwoThreePlayerTen{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 3;
+    grid-column-start: 7;
+}
+
+.fourTwoThreePlayerEleven{
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 4;
+    grid-column-start: 4;
+}

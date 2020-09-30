@@ -12,13 +12,14 @@ import Alerts from './layout/Alerts';
 import Login from './accounts/Login';
 import Register from './accounts/Register';
 import PrivateRoute from './common/PrivateRoute';
+import TeamSheetContainer from './pages/containers/TeamSheetContainer'
 
 
 import { Provider } from 'react-redux';
 import store from '../store';
 import { loadUser } from '../actions/auth';
 
-//Alert Options 
+//Alert Options
 const alertOptions = {
     timeout: 3000,
     position: 'top center',
@@ -40,6 +41,7 @@ class App extends Component {
                             <div className="container">
                                 <Switch>
                                 <PrivateRoute exact path="/" component={Dashboard} />
+                                <PrivateRoute exact path="/teambuilder" component={TeamSheetContainer} />
                                 <Route exact path="/register" component={Register} />
                                 <Route exact path="/login" component={Login} />
                                 </Switch>
