@@ -14,7 +14,7 @@ export const getPlayers = () => (dispatch, getState) => {
             payload: res.data
         });
     })
-    .catch(err => 
+    .catch(err =>
         dispatch(returnErrors(err.response.data, err.response.status)));
 }
 
@@ -23,7 +23,7 @@ export const deletePlayers = (id) => (dispatch, getState) => {
     axios
       .delete(`/api/players/${id}/`, tokenConfig(getState))
       .then((res) => {
-        dispatch(createMessage({ deleteLead: 'Lead Deleted' }));
+        dispatch(createMessage({ addPlayer: 'Player Deleted' }));
         dispatch({
           type: DELETE_PLAYERS,
           payload: id,
@@ -41,6 +41,6 @@ export const addPlayers = (players) => (dispatch, getState) => {
             type: ADD_PLAYERS,
             payload: res.data,
         });
-    }) 
+    })
     .catch(err => dispatch(returnErrors(err.response.data, err.response.status)));
 };
