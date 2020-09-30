@@ -26,6 +26,7 @@ export class ReportsList extends Component {
                             <th>Message</th>
                             <th>Final Score</th>
                             <th>Result</th>
+                            <th>Team</th>
                             <th />
                         </tr>
                     </thead>
@@ -37,6 +38,7 @@ export class ReportsList extends Component {
                                 <td>{report.message}</td>
                                 <td>{report.final_score}</td>
                                 <td>{report.result}</td>
+                                <td>{report.team_id}</td>
                                 <td><button onClick={this.props.deleteReports.bind(this, report.id)} className="btn btn-danger btn-sm">Delete</button></td>
                             </tr>
                         ))}
