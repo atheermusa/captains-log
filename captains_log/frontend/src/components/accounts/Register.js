@@ -30,6 +30,7 @@ export class Register extends Component {
         email
       };
       this.props.register(newUser);
+      this.props.createMessage({ registerSuccess: 'User registered, please log in' })
     }
   };
 
