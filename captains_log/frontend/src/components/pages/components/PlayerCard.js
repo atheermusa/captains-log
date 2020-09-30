@@ -6,9 +6,9 @@ export default class PlayerCard extends Component {
         const target = e.target;
         e.dataTransfer.setData('player_id', target.id);
 
-        setTimeout(() => {
-            target.style.display = 'none'
-        }, 0);
+        // setTimeout(() => {
+        //     target.style.display = 'none'
+        // }, 0);
     };
 
     dragOver = e => {
