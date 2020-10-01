@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from '../../actions/auth';
-import Homepage from '../pages/containers/Homepage'
+import '../pages/Styles/Header.css'
+// import Homepage from '../pages/containers/Homepage'
 
 export class Header extends Component {
   static propTypes = {
@@ -15,7 +16,7 @@ export class Header extends Component {
     const { isAuthenticated, user } = this.props.auth;
 
     const authLinks = (
-      <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
+      <ul className="navbar-nav ml-auto mt-2 mt-lg-0 " >
         <span className="navbar-text mr-3">
           <strong>{user ? `Welcome ${user.username}` : ''}</strong>
         </span>
@@ -40,7 +41,7 @@ export class Header extends Component {
           </Link>
         </li>
         <li className="nav-item">
-          <button onClick={this.props.logout} className="nav-link btn btn-info btn-sm text-light">
+          <button onClick={this.props.logout} className="logout-btn">
             Logout
           </button>
         </li>

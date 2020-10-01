@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { PlayerList, PlayerPosition, TeamList } from '../components';
+import { PlayerList, PlayerPosition, TeamList, ShareTeam } from '../components';
 import '../Styles/teamBuilder.css';
 import propTypes from 'prop-types';
 import { addTeamPlayers } from '../../../actions/teamPlayers';
@@ -134,6 +134,7 @@ export class TeamSheetContainer extends Component {
             <PlayerPosition updateState={this.updateState} id="player-position-11" className={this.state.playerEleven} ></PlayerPosition>
           </div>
           <button onClick={this.saveTeam}>Save Team</button>
+          <ShareTeam></ShareTeam>
         </div>
         <div id='team-builder-players-container'>
             <h1>Players</h1>

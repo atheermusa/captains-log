@@ -18,8 +18,6 @@ import TeamSheetContainer from './pages/containers/TeamSheetContainer';
 import PlayersPage from './pages/containers/PlayersPage';
 import ReportsPage from './pages/containers/ReportsPage'
 
-
-
 import { Provider } from 'react-redux';
 import store from '../store';
 import { loadUser } from '../actions/auth';
