@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { PlayerList, PlayerPosition, TeamList, ShareTeam } from '../components';
+import { PlayerList, PlayerPosition, TeamList } from '../components';
 import '../Styles/teamBuilder.css';
 import propTypes from 'prop-types';
 import { addTeamPlayers } from '../../../actions/teamPlayers';
@@ -124,12 +124,12 @@ export class TeamSheetContainer extends Component {
       <div id='team-builder-container'>
         <div id='team-builder-teams-container'>
         <h1>Teams</h1>
-        <p>Click to see different team formations</p>
           <TeamList></TeamList>
         </div>
         <div id="team-builder-pitch-container">
           <div className="formation-selector">
-            <select onChange = {this.formationPicker} value={this.state.formation}>
+          <p id="text-form">Click to see different team formations</p>
+            <select className="submit-btn" onChange = {this.formationPicker} value={this.state.formation}>
               <option value="threeFourThree">3-4-3</option>
               <option value="threeFiveTwo">3-5-2</option>
               <option value="fourFourTwo">4-4-2</option>
@@ -138,8 +138,9 @@ export class TeamSheetContainer extends Component {
             </select>
           </div>
           <div>
-            <label>Team Name</label>
+            <label id="text">Team Name: </label>
             <input
+              id="text-box"
               type="text"
               name="team_name"
               onChange={this.nameChange}
@@ -158,7 +159,7 @@ export class TeamSheetContainer extends Component {
             <PlayerPosition updateState={this.updateState} id="player-position-10" className={this.state.playerTen} ></PlayerPosition>
             <PlayerPosition updateState={this.updateState} id="player-position-11" className={this.state.playerEleven} ></PlayerPosition>
           </div>
-          <button onClick={this.saveTeam}>Save Team</button>
+          <button className="submit-btn" onClick={this.saveTeam}>Save Team</button>
         </div>
         <div id='team-builder-players-container'>
             <h1>Players</h1>
