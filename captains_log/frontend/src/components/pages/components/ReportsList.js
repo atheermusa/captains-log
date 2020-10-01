@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import propTypes from 'prop-types';
 import { getReports, deleteReports } from '../../../actions/reports'
 import EmailReport from './emailReport'
+import { ShareTeam } from '../components';
 
 export class ReportsList extends Component {
     static propTypes = {
@@ -43,6 +44,7 @@ export class ReportsList extends Component {
                                 <td>
                                 <button onClick={this.props.deleteReports.bind(this, report.id)} className="btn btn-danger btn-sm">Delete</button>
                                 <EmailReport date={report.date} opposition={report.opposition} message = {report.message} final_score={report.final_score} result={report.result}/>
+                                <ShareTeam></ShareTeam>
                                 </td>
                             </tr>
                         ))}
