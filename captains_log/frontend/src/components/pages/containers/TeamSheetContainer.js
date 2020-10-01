@@ -9,8 +9,8 @@ import { addTeamPlayers } from '../../../actions/teamPlayers';
 export class TeamSheetContainer extends Component {
 
   state = {
-    formation: 'formationOne',
-    teamName: '',
+    formation: 'threeFourThree',
+    team_name: null,
     playerOne: 'threeFourThreePlayerOne',
     playerTwo: 'threeFourThreePlayerTwo',
     playerThree: 'threeFourThreePlayerThree',
@@ -60,10 +60,35 @@ export class TeamSheetContainer extends Component {
 
   saveTeam = (e) => {
     e.preventDefault();
-    const {formation, position1, position2, position3, position4, position5, position6, position7, position8, position9, position10, position11}=this.state;
-    const teamPlayers = {formation, position1, position2, position3, position4, position5, position6, position7, position8, position9, position10, position11}
-    console.log(this.props.addTeamPlayers)
+    const {formation, team_name, position1, position2, position3, position4, position5, position6, position7, position8, position9, position10, position11}=this.state;
+    const teamPlayers = {formation, team_name, position1, position2, position3, position4, position5, position6, position7, position8, position9, position10, position11}
     this.props.addTeamPlayers(teamPlayers);
+    this.setState({
+      formation: 'threeFourThree',
+      team_name: null,
+      playerOne: 'threeFourThreePlayerOne',
+      playerTwo: 'threeFourThreePlayerTwo',
+      playerThree: 'threeFourThreePlayerThree',
+      playerFour: 'threeFourThreePlayerFour',
+      playerFive: 'threeFourThreePlayerFive',
+      playerSix: 'threeFourThreePlayerSix',
+      playerSeven: 'threeFourThreePlayerSeven',
+      playerEight: 'threeFourThreePlayerEight',
+      playerNine: 'threeFourThreePlayerNine',
+      playerTen: 'threeFourThreePlayerTen',
+      playerEleven: 'threeFourThreePlayerEleven',
+      playerposition1:null,
+      playerposition2:null,
+      playerposition3:null,
+      playerposition4:null,
+      playerposition5:null,
+      playerposition6:null,
+      playerposition7:null,
+      playerposition8:null,
+      playerposition9:null,
+      playerposition10:null,
+      playerposition11:null
+  });
   }
 
 
@@ -88,7 +113,7 @@ export class TeamSheetContainer extends Component {
   nameChange = (e) => {
     this.setState(
       {
-        teamName: e.target.value,
+        team_name: e.target.value,
       }
     )
   }

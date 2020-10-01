@@ -35,7 +35,7 @@ class MatchReport(models.Model):
     owner = models.ForeignKey(User, related_name="reports", on_delete=models.CASCADE, null=True)
     date = models.DateField()
     opposition = models.CharField(max_length=40)
-    message = models.CharField(max_length=1000)
+    message = models.CharField(max_length=10000)
     final_score = models.CharField(max_length=5)
     result = models.CharField(max_length=4)
     team_id = models.ForeignKey(TeamInfo, on_delete=models.CASCADE, null=True)

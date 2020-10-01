@@ -21,7 +21,7 @@ export class TeamList extends Component {
     render() {
         return (
             <div id = 'team-list-container'>
-                teamslist
+                Teams list
                 {this.props.teams.map((teams, idx) => (
               <TeamThumbnail
                 idx={idx}
@@ -30,6 +30,8 @@ export class TeamList extends Component {
                 photo={"https://res.cloudinary.com/dl4pcxjxz/image/upload/v1601484399/443251-PFJIKT-956-01_wgpvbl.png"}
                 team_name={teams.team_name}
                 formation={teams.formation}
+                team_id = {teams.id}
+                deleteTeams = {this.props.deleteTeams.bind(this, teams.id)}
               />
               ))}
             </div>
