@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import propTypes from 'prop-types';
 import { addPlayers } from '../../actions/players';
+import './Styles/Players.css'
 
 export class AddPlayerForm extends Component {
     state = {
@@ -35,7 +36,7 @@ export class AddPlayerForm extends Component {
     render() {
         const { firstname, lastname, email, player_notes} = this.state;
         return (
-            <div className="card card-body mt-4 mb-4">
+            <div className="card-card-body-mt-4-mb-4">
             <h2>Add Player</h2>
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
@@ -79,7 +80,7 @@ export class AddPlayerForm extends Component {
                 />
               </div>
               <div className="form-group">
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" className="submit-btn">
                   Submit
                 </button>
                 <Link to="/teambuilder" className="nav-link">Create Team

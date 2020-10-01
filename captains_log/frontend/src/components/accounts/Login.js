@@ -3,6 +3,7 @@ import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../../actions/auth';
+import '../pages/Styles/Homepage.css';
 
 export class Login extends Component {
   state = {
@@ -28,6 +29,7 @@ export class Login extends Component {
     }
     const { username, password } = this.state;
     return (
+      <div id="login-container">
       <div className="col-md-6 m-auto">
         <div className="card card-body mt-5">
           <h2 className="text-center">Login</h2>
@@ -64,6 +66,7 @@ export class Login extends Component {
             </p>
           </form>
         </div>
+      </div>
       </div>
     );
   }

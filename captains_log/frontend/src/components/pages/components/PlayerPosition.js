@@ -7,7 +7,12 @@ export default class PlayerPosition extends Component {
 
         const player = document.getElementById(player_id)
         player.style.display= 'block';
-        this.props.updateState(player_id, e.target.id)
+        if (e.target.id) {
+          this.props.updateState(player_id, e.target.id)
+        } else {
+          this.props.updateState(player_id, null)
+        }
+
         e.target.appendChild(player)
     }
 
