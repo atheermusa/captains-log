@@ -15,8 +15,32 @@
 
 .player-thumbnail-name {
     grid-column: 2 / 4;
+    font-size: 18px;
+    margin-top: 20px;
 }
 
+.player-thumbnail-notes {
+    font-size: 14px;
+}
+
+.delete-btn {
+    border: 2px solid #d32e2e;
+    border-radius: 8px;
+    /* background-color: rgb(175, 110, 110); */
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #d32e2e;
+    cursor: pointer;
+    background: none;
+    color: #d32e2e;
+    outline: none;
+  }
+
+.delete-btn:hover {
+    background: #d1353560;
+    color: #3d3d3d;
+    outline: none;
+  }
 .notes {
     /* grid-row: 2; */
     grid-column: 2 / 4;
