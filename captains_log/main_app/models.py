@@ -25,11 +25,11 @@ class TeamInfo(models.Model):
     position10 = models.CharField(max_length=20, null=True)
     position11 = models.CharField(max_length=20, null=True)
 
-class TeamPlayers(models.Model):
-    owner = models.ForeignKey(User, related_name="teamplayers", on_delete=models.CASCADE, null=True)
-    team_id = models.ForeignKey(TeamInfo, on_delete=models.CASCADE, null=True)
-    player_id = models.ForeignKey(Players, on_delete=models.CASCADE, null=True)
-    position = models.CharField(max_length=10)
+# class TeamPlayers(models.Model):
+#     owner = models.ForeignKey(User, related_name="teamplayers", on_delete=models.CASCADE, null=True)
+#     team_id = models.ForeignKey(TeamInfo, on_delete=models.CASCADE, null=True)
+#     player_id = models.ForeignKey(Players, on_delete=models.CASCADE, null=True)
+#     position = models.CharField(max_length=10)
 
 class MatchReport(models.Model):
     owner = models.ForeignKey(User, related_name="reports", on_delete=models.CASCADE, null=True)
