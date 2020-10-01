@@ -1,0 +1,37 @@
+.card-card-body-mt-4-mb-4 {
+    border: solid #9acc9a 1px;
+    padding: 20px;
+    margin-top: 25px;
+    border-radius: 8px;
+}
+
+.submit-btn {
+        border: 2px solid #9acc9a;
+        border-radius: 8px;
+        /* background-color: rgb(175, 110, 110); */
+        padding: 6px 12px;
+        font-size: 16px;
+        color: #9acc9a;
+        cursor: pointer;
+        background: none;
+        color: #9acc9a;
+        outline: none;
+      }
+    
+.submit-btn:hover {
+        background: #9acc9a60;
+        color: #3d3d3d;
+    }
+
+.nav-link {
+    color: #9acc9a;
+}
+
+tr:nth-child(even) {
+    background-color: #9acc9a6c;
+  }
+
+#player-title {
+    margin-top: 25px;
+    font-size: 50px;
+}

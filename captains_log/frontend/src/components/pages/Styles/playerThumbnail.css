@@ -6,7 +6,7 @@
 
 .player-thumbnail-photo {
     display: block;
-    width: 5em;
+    width: 3em;
     -webkit-user-drag: none;
     -khtml-user-drag: none;
     -moz-user-drag: none;
@@ -20,4 +20,5 @@
 .player-thumbnail-notes {
     /* grid-row: 2; */
     grid-column: 2 / 4;
+    padding: 20px;
 }

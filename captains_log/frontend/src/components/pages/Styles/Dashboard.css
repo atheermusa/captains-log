@@ -1,0 +1,39 @@
+body{
+    background-color: #ffffff;
+}
+
+.title {
+    margin-top: 120px;
+    font-size: 100px;
+    padding: 20px;
+    color: #3d3d3d;
+}
+
+#about {
+    font-size: 40px;
+    width: 60%;
+    padding: 20px;
+    color: #3d3d3d;
+}
+
+.btn-default {
+    border: 2px solid #9acc9a;
+    border-radius: 8px;
+    /* background-color: rgb(175, 110, 110); */
+    padding: 14px 28px;
+    font-size: 16px;
+    color: #9acc9a;
+    cursor: pointer;
+    background: none;
+    color: #9acc9a;
+    outline: none;
+  }
+
+  .btn-default:hover {
+    background: #9acc9a60;
+    color: #3d3d3d;
+  }
+
+  .btn-default:focus {
+      outline:0;
+    }

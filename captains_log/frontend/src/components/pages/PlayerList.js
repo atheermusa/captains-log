@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import propTypes from 'prop-types';
 import { getPlayers, deletePlayers } from '../../actions/players'
+import './Styles/Players.css'
 
 export class PlayerList extends Component {
     static propTypes = {
@@ -17,7 +18,7 @@ export class PlayerList extends Component {
     render() {
         return (
             <Fragment>
-                <h2>Players</h2>
+                <h2 id="player-title">Your Players:</h2>
                 <table className="table table-striped">
                     <thead>
                         <tr>

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import './Styles/Home.css';
+import '../Styles/Homepage.css';
 
 export default function PlayersPage() {
     return (

@@ -27,7 +27,7 @@ export class PlayerList extends Component {
                 idx={idx}
                 id={idx}
                 key={idx}
-                photo={"https://res.cloudinary.com/dl4pcxjxz/image/upload/v1601304993/cbWFuY2hlc3Rlci11bml0ZWQtc2hpcnQtMjAyMC0yMS1udW1iZXItNy1iZWNraGFtLTM5NDItMDAxLXNxdWFyZQ_aa_qt8ujn.png"}
+                photo={"https://images.vexels.com/media/users/3/132209/isolated/preview/a00fc18d8cd573976f1096054905655b-soccer-player-circle-icon-by-vexels.png"}
                 firstName={player.firstname}
                 lastName={player.lastname}
                 email={player.email}
