@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { register } from '../../actions/auth';
 import { createMessage } from '../../actions/messages';
+import '../pages/Styles/Homepage.css';
 
 export class Register extends Component {
   state = {
@@ -42,8 +43,9 @@ export class Register extends Component {
     }
     const { username, email, password, password2 } = this.state;
     return (
+      <div id="login-container">
       <div className="col-md-6 m-auto">
-        <div className="card card-body mt-5">
+        <div className="card card-body mt-5 container-box">
           <h2 className="text-center">Register</h2>
           <form onSubmit={this.onSubmit}>
             <div className="form-group">
@@ -87,15 +89,16 @@ export class Register extends Component {
               />
             </div>
             <div className="form-group">
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="btn btn-primary reg-login-btn">
                 Register
               </button>
             </div>
             <p>
-              Already have an account? <Link to="/login">Login</Link>
+              Already have an account? <Link className="reg-login-link" to="/login">Login</Link>
             </p>
           </form>
         </div>
+      </div>
       </div>
     );
   }
