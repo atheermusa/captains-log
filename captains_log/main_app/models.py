@@ -11,8 +11,19 @@ class Players(models.Model):
 
 class TeamInfo(models.Model):
     owner = models.ForeignKey(User, related_name="teams", on_delete=models.CASCADE, null=True)
-    team_name = models.CharField(max_length=50)
-    formation = models.CharField(max_length=10)
+    team_name = models.CharField(max_length=50, null=True)
+    formation = models.CharField(max_length=20)
+    position1 = models.CharField(max_length=20, null=True)
+    position2 = models.CharField(max_length=20, null=True)
+    position3 = models.CharField(max_length=20, null=True)
+    position4 = models.CharField(max_length=20, null=True)
+    position5 = models.CharField(max_length=20, null=True)
+    position6 = models.CharField(max_length=20, null=True)
+    position7 = models.CharField(max_length=20, null=True)
+    position8 = models.CharField(max_length=20, null=True)
+    position9 = models.CharField(max_length=20, null=True)
+    position10 = models.CharField(max_length=20, null=True)
+    position11 = models.CharField(max_length=20, null=True)
 
 class TeamPlayers(models.Model):
     owner = models.ForeignKey(User, related_name="teamplayers", on_delete=models.CASCADE, null=True)
