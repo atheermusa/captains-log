@@ -1,3 +1,12 @@
+#pitch-img {
+    /* width: 600px;
+    height: 500px; */
+    width: 40%;
+    /* height: 300px; */
+    position: absolute;
+    opacity: 20%;
+}
+
 #team-builder-container {
     padding-top: 5vh;
     display: flex;
@@ -34,6 +43,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     background-color: #9ACC9A;
+    /* position: fixed; */
     justify-items: center;
     align-items: center;
 }

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-export default function Dashboard() {
+export default function ShareTeam() {
     return (
         <Fragment>
           <button>Share Team Sheet</button>
