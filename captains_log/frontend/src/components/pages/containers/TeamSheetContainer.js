@@ -10,6 +10,7 @@ export class TeamSheetContainer extends Component {
 
   state = {
     formation: 'formationOne',
+    teamName: '',
     playerOne: 'threeFourThreePlayerOne',
     playerTwo: 'threeFourThreePlayerTwo',
     playerThree: 'threeFourThreePlayerThree',
@@ -21,28 +22,17 @@ export class TeamSheetContainer extends Component {
     playerNine: 'threeFourThreePlayerNine',
     playerTen: 'threeFourThreePlayerTen',
     playerEleven: 'threeFourThreePlayerEleven',
-    position1:null,
-    // player1position:"",
-    position2:null,
-    // player2position:"",
-    position3:null,
-    // player3position:"",
-    position4:null,
-    // player4position:"",
-    position5:null,
-    // player5position:"",
-    position6:null,
-    // player6position:"",
-    position7:null,
-    // player7position:"",
-    position8:null,
-    // player8position:"",
-    position9:null,
-    // player9position:"",
-    position10:null,
-    // player10position:"",
-    position11:null
-    // player11position:"",
+    playerposition1:null,
+    playerposition2:null,
+    playerposition3:null,
+    playerposition4:null,
+    playerposition5:null,
+    playerposition6:null,
+    playerposition7:null,
+    playerposition8:null,
+    playerposition9:null,
+    playerposition10:null,
+    playerposition11:null
   }
 
   formationPicker = (e) => {
@@ -76,99 +66,29 @@ export class TeamSheetContainer extends Component {
     this.props.addTeamPlayers(teamPlayers);
   }
 
-  updateState1 = (player, position) => {
-    this.setState(
-      {
-        position1:player,
-        // player1position:position
+
+  updateState = (player, posit) => {
+    let position
+    if(posit){
+      position = posit.replace('-','').replace('-','')
+    } else {
+       position = posit
+     }
+    console.log(position, player)
+    console.log(this.state)
+
+    for(let key in this.state) {
+      if(this.state[key] === player){
+        this.setState({[key]:null})
       }
-    )
+    }
+    this.setState({[position]:player})
   }
-  updateState2 = (player, position) => {
+
+  nameChange = (e) => {
     this.setState(
       {
-        position2:player,
-        // player2position:position
-      }
-    )
-  }
-  updateState2 = (player, position) => {
-    this.setState(
-      {
-        position2:player,
-        // player2position:position
-      }
-    )
-  }
-  updateState3 = (player, position) => {
-    this.setState(
-      {
-        position3:player,
-        // player3position:position
-      }
-    )
-  }
-  updateState4 = (player, position) => {
-    this.setState(
-      {
-        position4:player,
-        // player4position:position
-      }
-    )
-  }
-  updateState5 = (player, position) => {
-    this.setState(
-      {
-        position5:player,
-        // player5position:position
-      }
-    )
-  }
-  updateState6 = (player, position) => {
-    this.setState(
-      {
-        position6:player,
-        // player6position:position
-      }
-    )
-  }
-  updateState7 = (player, position) => {
-    this.setState(
-      {
-        position7:player,
-        // player7position:position
-      }
-    )
-  }
-  updateState8 = (player, position) => {
-    this.setState(
-      {
-        position8:player,
-        // player8position:position
-      }
-    )
-  }
-  updateState9 = (player, position) => {
-    this.setState(
-      {
-        position9:player,
-        // player9position:position
-      }
-    )
-  }
-  updateState10 = (player, position) => {
-    this.setState(
-      {
-        position10:player,
-        // player10position:position
-      }
-    )
-  }
-  updateState11 = (player, position) => {
-    this.setState(
-      {
-        position11:player,
-        // player11position:position
+        teamName: e.target.value,
       }
     )
   }
@@ -192,18 +112,26 @@ export class TeamSheetContainer extends Component {
               <option value="fourTwoThree">4-2-3</option>
             </select>
           </div>
+          <div>
+            <label>Team Name</label>
+            <input
+              type="text"
+              name="team_name"
+              onChange={this.nameChange}
+            />
+          </div>
           <div id="teamGrid" className={this.state.formation}>
-            <PlayerPosition updateState={this.updateState1} id="player-position-1" className={this.state.playerOne} ></PlayerPosition>
-            <PlayerPosition updateState={this.updateState2} id="player-position-2" className={this.state.playerTwo} ></PlayerPosition>
-            <PlayerPosition updateState={this.updateState3} id="player-position-3" className={this.state.playerThree} ></PlayerPosition>
-            <PlayerPosition updateState={this.updateState4} id="player-position-4" className={this.state.playerFour} ></PlayerPosition>
-            <PlayerPosition updateState={this.updateState5} id="player-position-5" className={this.state.playerFive} ></PlayerPosition>
-            <PlayerPosition updateState={this.updateState6} id="player-position-6" className={this.state.playerSix} ></PlayerPosition>
-            <PlayerPosition updateState={this.updateState7} id="player-position-7" className={this.state.playerSeven} ></PlayerPosition>
-            <PlayerPosition updateState={this.updateState8} id="player-position-8" className={this.state.playerEight} ></PlayerPosition>
-            <PlayerPosition updateState={this.updateState9} id="player-position-9" className={this.state.playerNine} ></PlayerPosition>
-            <PlayerPosition updateState={this.updateState10} id="player-position-10" className={this.state.playerTen} ></PlayerPosition>
-            <PlayerPosition updateState={this.updateState11} id="player-position-11" className={this.state.playerEleven} ></PlayerPosition>
+            <PlayerPosition updateState={this.updateState} id="player-position-1" className={this.state.playerOne} ></PlayerPosition>
+            <PlayerPosition updateState={this.updateState} id="player-position-2" className={this.state.playerTwo} ></PlayerPosition>
+            <PlayerPosition updateState={this.updateState} id="player-position-3" className={this.state.playerThree} ></PlayerPosition>
+            <PlayerPosition updateState={this.updateState} id="player-position-4" className={this.state.playerFour} ></PlayerPosition>
+            <PlayerPosition updateState={this.updateState} id="player-position-5" className={this.state.playerFive} ></PlayerPosition>
+            <PlayerPosition updateState={this.updateState} id="player-position-6" className={this.state.playerSix} ></PlayerPosition>
+            <PlayerPosition updateState={this.updateState} id="player-position-7" className={this.state.playerSeven} ></PlayerPosition>
+            <PlayerPosition updateState={this.updateState} id="player-position-8" className={this.state.playerEight} ></PlayerPosition>
+            <PlayerPosition updateState={this.updateState} id="player-position-9" className={this.state.playerNine} ></PlayerPosition>
+            <PlayerPosition updateState={this.updateState} id="player-position-10" className={this.state.playerTen} ></PlayerPosition>
+            <PlayerPosition updateState={this.updateState} id="player-position-11" className={this.state.playerEleven} ></PlayerPosition>
           </div>
           <button onClick={this.saveTeam}>Save Team</button>
           <ShareTeam></ShareTeam>
@@ -212,7 +140,10 @@ export class TeamSheetContainer extends Component {
             <h1>Players</h1>
             <p>Drag and drop the player image into the desired position</p>
             <div className='team-builder-players-list'>
-              <PlayerList></PlayerList>
+              <PlayerList
+                  updateState={this.updateState}
+                  >
+              </PlayerList>
             </div>
         </div>
       </div>

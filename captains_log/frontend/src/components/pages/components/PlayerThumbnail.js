@@ -11,7 +11,7 @@ export default class PlayerThumbnail extends Component {
     render() {
         return (
             <div className='player-thumbnail-container'>
-                <PlayerPosition>
+                <PlayerPosition updateState={this.props.updateState}>
                 <PlayerCard id = {this.state.id} className="player-thumbnail">
                     <img className="player-thumbnail-photo" src={this.props.photo} alt="football shirt icon"></img>
                     <p className= 'player-thumbnail-name' >{this.props.firstName} {this.props.lastName}</p>

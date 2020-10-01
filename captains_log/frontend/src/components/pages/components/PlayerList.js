@@ -23,6 +23,7 @@ export class PlayerList extends Component {
             <div id = 'player-list-container'>
                 {this.props.players.map((player, idx) => (
               <PlayerThumbnail
+                updateState={this.props.updateState}
                 idx={idx}
                 id={idx}
                 key={idx}
