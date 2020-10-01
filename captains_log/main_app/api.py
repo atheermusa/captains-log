@@ -1,6 +1,6 @@
-from .models import Players, MatchReport, TeamInfo, TeamPlayers
+from .models import Players, MatchReport, TeamInfo
 from rest_framework import viewsets, permissions
-from .serializers import PlayersSerializer, MatchReportSerializer, TeamInfoSerializer, TeamPlayersSerializer
+from .serializers import PlayersSerializer, MatchReportSerializer, TeamInfoSerializer
 
 class PlayersViewSet(viewsets.ModelViewSet):
     permission_classes = [
@@ -52,14 +52,14 @@ class TeamInfoViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
 
-class TeamPlayersViewSet(viewsets.ModelViewSet):
-    permission_classes = [
-        permissions.IsAuthenticated
-    ]
-    serializer_class = TeamPlayersSerializer
-
-    def get_queryset(self):
-        return self.request.user.teamplayers.all()
-
-    def perform_create(self, serializer):
-        serializer.save(owner=self.request.user)
+# class TeamPlayersViewSet(viewsets.ModelViewSet):
+#     permission_classes = [
+#         permissions.IsAuthenticated
+#     ]
+#     serializer_class = TeamPlayersSerializer
+#
+#     def get_queryset(self):
+#         return self.request.user.teamplayers.all()
+#
+#     def perform_create(self, serializer):
+#         serializer.save(owner=self.request.user)

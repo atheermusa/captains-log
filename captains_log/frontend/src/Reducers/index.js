@@ -5,6 +5,7 @@ import messages from './messages';
 import auth from "./auth";
 import teams from "./teams";
 import reports from "./reports";
+import teamPlayers from "./teamPlayers";
 
 
 export default combineReducers({
@@ -13,5 +14,6 @@ export default combineReducers({
     messages,
     auth,
     reports,
-    teams
+    teams,
+    teamPlayers
 });
