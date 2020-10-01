@@ -18,7 +18,7 @@ export class ReportsList extends Component {
     render() {
         return (
             <Fragment>
-                <h2>Reports</h2>
+                <h2 id="report-title">Reports</h2>
                 <table className="table table-striped">
                     <thead>
                         <tr>
