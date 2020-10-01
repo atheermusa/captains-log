@@ -2,11 +2,45 @@ body {
     background-color: #ffffff;
 }
 
+.submit-btn {
+    border: 2px solid #9acc9a;
+    border-radius: 8px;
+    /* background-color: rgb(175, 110, 110); */
+    padding: 6px 12px;
+    font-size: 16px;
+    color: #9acc9a;
+    cursor: pointer;
+    background: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #9acc9a;
+    outline: none;
+  }
+
+.submit-btn:hover {
+    background: #9acc9a60;
+    color: #3d3d3d;
+}
+
+#text{
+    font-size: 20px;
+}
+
+#text-box {
+    border: solid 1px #9acc9a;
+    margin-left: 10px;
+    border-radius: 8px;
+    font-size: 20px;
+
+}
+
+#text-form {
+    margin-bottom: -10px;
+}
 
 #pitch-img {
     /* width: 600px;
     height: 500px; */
-    width: 40%;
     /* height: 300px; */
     position: absolute;
     opacity: 20%;
@@ -14,25 +48,27 @@ body {
 
 #team-builder-container {
     padding-top: 5vh;
+    width: 100%;
     display: flex;
     height: 60vh;
     justify-content: space-around;
 }
 
 #team-builder-pitch-container {
-    width: 60%;
+    width: 70%;
     padding-left: 5vh;
     padding-right: 5vh;
+    border-radius: 8px;
 }
 
 #team-builder-players-container {
-    width: 20%;
+    width: 10%;
     height: 60vh;
     overflow-y: scroll;
 }
 
 #team-builder-teams-container {
-    width: 20%;
+    width: 10%;
     height: 60vh;
     overflow-y: scroll;
 }
@@ -48,7 +84,8 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     background-color: #9ACC9A;
-    padding: 20px;
+    padding: 40px;
+    border-radius: 5px;
     /* position: fixed; */
     justify-items: center;
     align-items: center;
@@ -160,6 +197,7 @@ grid-column-start: 6;
 .threeFourThreePlayerEleven{
     background-color: ivory;
     padding: 20px;
+    margin-top: 20px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -202,6 +240,8 @@ grid-column-start: 3;
 .threeFiveTwoPlayerFour{
     background-color: ivory;
     padding: 20px;
+    margin-top: 10px;
+    margin-right: 20px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -222,6 +262,8 @@ grid-column-start: 3;
 .threeFiveTwoPlayerSix{
     background-color: ivory;
     padding: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -242,6 +284,7 @@ grid-column-start: 3;
 .threeFiveTwoPlayerEight{
     background-color: ivory;
     padding: 20px;
+    margin-top: 10px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -252,6 +295,7 @@ grid-column-start: 3;
 .threeFiveTwoPlayerNine{
     background-color: ivory;
     padding: 20px;
+    margin-top: 10px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -262,6 +306,7 @@ grid-column-start: 3;
 .threeFiveTwoPlayerTen{
     background-color: ivory;
     padding: 20px;
+    margin-top: 10px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -272,6 +317,7 @@ grid-column-start: 3;
 .threeFiveTwoPlayerEleven{
     background-color: ivory;
     padding: 20px;
+    margin-top: 20px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -315,6 +361,7 @@ grid-column-start: 3;
 .fourFourTwoPlayerFour{
     background-color: ivory;
     padding: 20px;
+    margin-top: 10px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -325,6 +372,7 @@ grid-column-start: 3;
 .fourFourTwoPlayerFive{
     background-color: ivory;
     padding: 20px;
+    margin-top: 10px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -345,6 +393,7 @@ grid-column-start: 3;
 .fourFourTwoPlayerSeven{
     background-color: ivory;
     padding: 20px;
+    margin-top: 10px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -355,6 +404,7 @@ grid-column-start: 3;
 .fourFourTwoPlayerEight{
     background-color: ivory;
     padding: 20px;
+    margin-top: 18px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -365,6 +415,7 @@ grid-column-start: 3;
 .fourFourTwoPlayerNine{
     background-color: ivory;
     padding: 20px;
+    margin-top: 18px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -375,6 +426,7 @@ grid-column-start: 3;
 .fourFourTwoPlayerTen{
     background-color: ivory;
     padding: 20px;
+    margin-top: 10px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -385,6 +437,7 @@ grid-column-start: 3;
 .fourFourTwoPlayerEleven{
     background-color: ivory;
     padding: 20px;
+    margin-top: 20px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -427,6 +480,7 @@ grid-column-start: 3;
 .fourThreeThreePlayerFour{
     background-color: ivory;
     padding: 20px;
+    margin-top: 10px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -437,6 +491,7 @@ grid-column-start: 3;
 .fourThreeThreePlayerFive{
     background-color: ivory;
     padding: 20px;
+    margin-top: 10px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -447,6 +502,7 @@ grid-column-start: 3;
 .fourThreeThreePlayerSix{
     background-color: ivory;
     padding: 20px;
+    margin-top: 10px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -457,6 +513,7 @@ grid-column-start: 3;
 .fourThreeThreePlayerSeven{
     background-color: ivory;
     padding: 20px;
+    margin-top: 10px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -467,6 +524,7 @@ grid-column-start: 3;
 .fourThreeThreePlayerEight{
     background-color: ivory;
     padding: 20px;
+    margin-top: 10px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -477,6 +535,7 @@ grid-column-start: 3;
 .fourThreeThreePlayerNine{
     background-color: ivory;
     padding: 20px;
+    margin-top: 10px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -487,6 +546,7 @@ grid-column-start: 3;
 .fourThreeThreePlayerTen{
     background-color: ivory;
     padding: 20px;
+    margin-top: 10px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -497,6 +557,7 @@ grid-column-start: 3;
 .fourThreeThreePlayerEleven{
     background-color: ivory;
     padding: 20px;
+    margin-top: 20px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -539,6 +600,7 @@ grid-column-start: 3;
 .fourTwoThreePlayerFour{
     background-color: ivory;
     padding: 20px;
+    margin-top: 10px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -549,6 +611,7 @@ grid-column-start: 3;
 .fourTwoThreePlayerFive{
     background-color: ivory;
     padding: 20px;
+    margin-top: 10px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -559,6 +622,7 @@ grid-column-start: 3;
 .fourTwoThreePlayerSix{
     background-color: ivory;
     padding: 20px;
+    margin-top: 10px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -569,6 +633,7 @@ grid-column-start: 3;
 .fourTwoThreePlayerSeven{
     background-color: ivory;
     padding: 20px;
+    margin-top: 10px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -579,6 +644,7 @@ grid-column-start: 3;
 .fourTwoThreePlayerEight{
     background-color: ivory;
     padding: 20px;
+    margin-top: 10px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -589,6 +655,7 @@ grid-column-start: 3;
 .fourTwoThreePlayerNine{
     background-color: ivory;
     padding: 20px;
+    margin-top: 10px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -599,6 +666,7 @@ grid-column-start: 3;
 .fourTwoThreePlayerTen{
     background-color: ivory;
     padding: 20px;
+    margin-top: 10px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -609,6 +677,7 @@ grid-column-start: 3;
 .fourTwoThreePlayerEleven{
     background-color: ivory;
     padding: 20px;
+    margin-top: 20px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
