@@ -14,6 +14,7 @@ export class Dashboard extends Component {
         const { user } = this.props.auth;
         return (
             <Fragment>
+                <div id="login-container">
                 <h1 className="title">Hello {user.username}</h1>
                 <h3 id="about">Welcome to your dashboard. From here you can add players to include into your team, or create a team now!</h3>
                 <Link to="/players" className="nav-link"><button className="btn-default">
@@ -22,6 +23,7 @@ export class Dashboard extends Component {
                 <Link to="/teambuilder" className="nav-link"><button className="btn-default">
                     Create Team</button>
                 </Link>
+                </div>
             </Fragment>
         )
     }

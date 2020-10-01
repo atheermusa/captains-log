@@ -38,7 +38,7 @@ export class AddReport extends Component {
     render() {
         const { date, opposition, message, final_score, result, team_id} = this.state;
         return (
-            <div className="card card-body mt-4 mb-4">
+            <div className="card-card-body-mt-4-mb-4">
             <h2>Add Report</h2>
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
@@ -102,7 +102,7 @@ export class AddReport extends Component {
                 />
               </div>
               <div className="form-group">
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" className="submit-btn">
                   Submit
                 </button>
               </div>
