@@ -17,3 +17,6 @@ export const ADD_REPORTS = 'ADD_REPORTS';
 export const GET_TEAMS = 'GET_TEAMS';
 export const DELETE_TEAMS = 'DELETE_TEAMS';
 export const ADD_TEAMS = 'ADD_TEAMS';
+export const GET_TEAMPLAYERS = 'GET_TEAMPLAYERS';
+export const DELETE_TEAMPLAYERS = 'DELETE_TEAMPLAYERS';
+export const ADD_TEAMPLAYERS = 'ADD_TEAMPLAYERS';
