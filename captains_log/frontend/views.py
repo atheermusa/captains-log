@@ -4,6 +4,9 @@ from django.http import HttpResponse, HttpResponseNotFound
 import io
 from django.http import FileResponse
 from reportlab.pdfgen import canvas
+from reportlab.lib.pagesizes import letter, landscape
+from reportlab.lib.pagesizes import A4
+
 
 # Create your views here.
 def index(request):
@@ -15,10 +18,15 @@ def pdf_view(request, content):
     buffer = io.BytesIO()
 
     # Create the PDF object, using the buffer as its "file."
-    p = canvas.Canvas(buffer)
+    p = canvas.Canvas(buffer, pagesize=A4)
+    date = content[0:10]
+    result = content[-4:-1] + content[-1]
+    score = content[-7:-4]
+    message = content[10:-7]
 
-    print(content)
-    p.drawString(100, 800, content)
+    p.drawString(20, 800, date)
+    p.drawString(400, 800, result)
+    p.drawString(200, 800, score)
 
     # Close the PDF object cleanly, and we're done.
     p.showPage()
