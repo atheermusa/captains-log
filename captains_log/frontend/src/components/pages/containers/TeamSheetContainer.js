@@ -134,7 +134,7 @@ export class TeamSheetContainer extends Component {
               <option value="threeFiveTwo">3-5-2</option>
               <option value="fourFourTwo">4-4-2</option>
               <option value="fourThreeThree">4-3-3</option>
-              <option value="fourTwoThree">4-2-3</option>
+              {/* <option value="fourTwoThree">4-2-3</option> */}
             </select>
           </div>
           <div>

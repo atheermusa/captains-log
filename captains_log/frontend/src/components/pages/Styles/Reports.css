@@ -82,3 +82,13 @@ tr:nth-child(even) {
     margin-top: 25px;
     font-size: 50px;
 }
+
+.form-control {
+    border: solid 0.5px #7e7e7e;
+    border-radius: 2px;
+}
+
+.form-control:focus {
+    outline:0;
+  }
+  
