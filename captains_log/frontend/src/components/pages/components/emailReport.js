@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import '../Styles/Reports.css'
 
 export class EmailReport extends Component {
 
@@ -9,7 +10,7 @@ export class EmailReport extends Component {
     render() {
         return (
             <Fragment>
-              <button onClick={this.createPDF} className="btn btn-success btn-sm"> Create PDF </button>
+              <button onClick={this.createPDF} className="submit-btn-r"> Create PDF </button>
             </Fragment>
         )
     }

@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { PlayerThumbnail } from '.';
 import PropTypes from 'prop-types';
 import { getPlayers } from '../../../actions/players'
+import '../Styles/Reports.css'
 
 
 export class ShareTeam extends Component {
@@ -31,7 +32,7 @@ export class ShareTeam extends Component {
     render() {
         return (
             <div id = 'share-team-container'>
-              <button onClick= {this.getPlayerEmails}>
+              <button className="email-btn" onClick= {this.getPlayerEmails}>
               <a href=  "mailto:emai@email.com?subject=Team Lineup">Send Email</a>
               </button>
               
