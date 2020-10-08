@@ -14,23 +14,61 @@
     border-radius: 8px;
 }
 
-.submit-btn {
+.submit-btn-r {
         border: 2px solid #9acc9a;
         border-radius: 8px;
         /* background-color: rgb(175, 110, 110); */
         padding: 6px 12px;
-        font-size: 16px;
+        margin-left: 10px;
+        font-size: 12px;
         color: #9acc9a;
         cursor: pointer;
         background: none;
-        color: #9acc9a;
         outline: none;
       }
     
-.submit-btn:hover {
+.submit-btn-r:hover {
         background: #9acc9a60;
         color: #3d3d3d;
     }
+
+    .delete-btn {
+        border: 2px solid #d32e2e;
+        border-radius: 8px;
+        /* background-color: rgb(175, 110, 110); */
+        padding: 6px 12px;
+        font-size: 14px;
+        color: #d32e2e;
+        cursor: pointer;
+        background: none;
+        outline: none;
+      }
+    
+    .delete-btn:hover {
+        background: #d1353560;
+        color: #3d3d3d;
+        outline: none;
+      }
+
+      .email-btn {
+        border: 2px solid #4a8dda;
+        border-radius: 8px;
+        /* background-color: rgb(175, 110, 110); */
+        padding: 6px 12px;
+        margin-top: 10px;
+        font-size: 14px;
+        color: #4a8dda;
+        cursor: pointer;
+        background: none;
+        outline: none;
+        text-decoration: none;
+      }
+    
+    .email-btn:hover {
+        background: #35a5d160;
+        color: #3d3d3d;
+        outline: none;
+      }
 
 .nav-link {
     color: #9acc9a;
@@ -44,3 +82,13 @@ tr:nth-child(even) {
     margin-top: 25px;
     font-size: 50px;
 }
+
+.form-control {
+    border: solid 0.5px #7e7e7e;
+    border-radius: 2px;
+}
+
+.form-control:focus {
+    outline:0;
+  }
+  

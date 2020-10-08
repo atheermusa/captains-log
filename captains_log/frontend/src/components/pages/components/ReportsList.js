@@ -4,6 +4,7 @@ import propTypes from 'prop-types';
 import { getReports, deleteReports } from '../../../actions/reports'
 import EmailReport from './emailReport'
 import { ShareTeam } from '../components';
+import '../Styles/Reports.css'
 
 export class ReportsList extends Component {
     static propTypes = {
@@ -42,7 +43,7 @@ export class ReportsList extends Component {
                                 <td>{report.result}</td>
                                 <td>{report.team_id}</td>
                                 <td>
-                                <button onClick={this.props.deleteReports.bind(this, report.id)} className="btn btn-danger btn-sm">Delete</button>
+                                <button onClick={this.props.deleteReports.bind(this, report.id)} className="delete-btn">Delete</button>
                                 <EmailReport date={report.date} opposition={report.opposition} message = {report.message} final_score={report.final_score} result={report.result}/>
                                 <ShareTeam></ShareTeam>
                                 </td>

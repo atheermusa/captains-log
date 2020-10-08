@@ -1,7 +1,7 @@
 .player-thumbnail-container {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    /* grid-template-rows: 2fr; */
+    /* grid-template-rows: 1fr 1fr 1fr; */
 }
 
 .player-thumbnail-photo {
@@ -11,14 +11,55 @@
     -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
+    cursor: grab;
 }
 
 .player-thumbnail-name {
-    grid-column: 2 / 4;
+    grid-column: 1 / 4;
+    font-size: 16px;
+    margin-top: 20px;
 }
 
+.player-thumbnail-notes {
+    /* margin-top: -25px; */
+    grid-column: 1 / 4;
+    font-size: 14px;
+}
+
+.team-thumbnail-name {
+    grid-column: 1 / 4;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.team-thumbnail-notes {
+    /* margin-top: -25px; */
+    grid-column: 1 / 4;
+    font-size: 14px;
+}
+
+.delete-btn {
+    grid-row: 4 ;
+    grid-column: 1 / 4;
+    border: 2px solid #d32e2e;
+    border-radius: 8px;
+    /* background-color: rgb(175, 110, 110); */
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #d32e2e;
+    cursor: pointer;
+    background: none;
+    color: #d32e2e;
+    outline: none;
+  }
+
+.delete-btn:hover {
+    background: #d1353560;
+    color: #3d3d3d;
+    outline: none;
+  }
 .notes {
     /* grid-row: 2; */
-    grid-column: 2 / 4;
+    grid-column: 1 / 4;
     /* padding: 20px; */
 }
